@@ -1,0 +1,256 @@
+body {
+    /* background-color: orange; */
+    padding: 0;
+    margin: 0;
+  }
+
+  h1 {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+
+  }
+ 
+.container {
+    background-color: orange;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.circle {
+    background-color: turquoise;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    /* align-items: center;
+    justify-content: center;
+    position: relative; */
+}
+
+.bowl {
+    background-image: url('ingredients/anime-bowl.png'); /* Your bowl image path */
+    background-size: cover; /* Ensure the image covers the whole div */
+    background-position: center; /* Centers the image inside the div */
+    width: 450px;
+    height: 350px;
+    position: relative; /* Keeps any child elements (like the egg or chopsticks) positioned correctly */
+}
+
+.noodles {
+    background-image: url('ingredients/pngtree-noodle-illustration-png-image_7264167.png');
+    width: 435px; 
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute; 
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.noodles:hover {
+    transform: translate(10px, -10px) scale(1.05); /* Moves the image and scales it slightly */
+}
+
+
+.ingredient_egg {
+    background-image: url('ingredients/boiled-egg-illustration-free-png.webp'); 
+    width: 200px; 
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-70%, -50%);
+  }
+
+  .ingredient_egg:hover {
+    transform: translate(10px, -5px) scale(1.05); /* Moves the image and scales it slightly */
+}
+
+
+  .chicken {
+    background-image: url('ingredients/chicken\ piece\ in\ ramen\ \(1\).png'); 
+    width: 100px; 
+    height: 100px;
+    background-size: contain;
+    background-position: right;
+    border-radius: 50%;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+  }
+
+  .mashroom {
+    background-image: url('ingredients/mashroom\ \(1\).png'); 
+    width: 50px; 
+    height: 50px;
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+    position: center; 
+    top: 80%; 
+    left: 80%; 
+    transform: translate(-300%, -50%);
+  }
+
+  /* .chop_sticks {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('ingredients/Chopsticks-No-Background.png');
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    position: absolute;
+    z-index: 10;
+} */
+
+
+.chop-sticks {
+    background-image: url('ingredients/Chopsticks-No-Background.png'); 
+    width: 200px; 
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute; 
+    top: 75%; 
+    left: 50%; 
+    transform: translate(-50%, -220%);
+  }
+
+
+
+.smoke-wrap {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 222px;
+  }
+  
+  .smoke,
+  .smoke2,
+  .smoke3 {
+    filter: blur(5px);
+    transform-origin: 50% 50%;
+  }
+  
+  .smoke {
+    animation: smoke1 3s linear infinite;
+    animation-delay: 0.5s;
+  }
+  
+  .smoke2 {
+    animation: smoke2 3s linear infinite;
+    animation-delay: 1.5s;
+  }
+  
+  .smoke3 {
+    width: 500px;
+    animation: smoke3 4s linear infinite;
+    animation-delay: 2.5s;
+  }
+  
+  @keyframes smoke1 {
+    0% {
+      filter: blur(0px);
+      transform: translateY(0px) scale(-1, 1);
+      opacity: 0;
+    }
+  
+    25% {
+      filter: blur(3px);
+      transform: translateY(-10px) scale(-1, 1.05);
+      opacity: 0.5;
+    }
+  
+    50% {
+      filter: blur(5px);
+      transform: translateY(-20px) scale(-1, 1.1);
+      opacity: 1;
+    }
+  
+    75% {
+      filter: blur(5px);
+      transform: translateY(-30px) scale(-1, 1.15);
+      opacity: 0.5;
+    }
+  
+    100% {
+      filter: blur(7px);
+      transform: translateY(-40px) scale(-1, 1.2);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes smoke2 {
+    0% {
+      filter: blur(0px);
+      transform: translateY(0px) scale(1);
+      opacity: 0;
+    }
+  
+    25% {
+      filter: blur(3px);
+      transform: translateY(-10px) scale(1.05);
+      opacity: 0.5;
+    }
+  
+    50% {
+      filter: blur(5px);
+      transform: translateY(-20px) scale(1.1);
+      opacity: 1;
+    }
+  
+    75% {
+      filter: blur(5px);
+      transform: translateY(-30px) scale(1.15);
+      opacity: 0.5;
+    }
+  
+    100% {
+      filter: blur(7px);
+      transform: translateY(-40px) scale(1.2);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes smoke3 {
+    0% {
+      filter: blur(0px);
+      transform: translateY(0px) scale(1);
+      opacity: 0;
+    }
+  
+    25% {
+      filter: blur(3px);
+      transform: translateY(-20px) scale(1.05);
+      opacity: 0.5;
+    }
+  
+    50% {
+      filter: blur(5px);
+      transform: translateY(-40px) scale(1.1);
+      opacity: 1;
+    }
+  
+    75% {
+      filter: blur(5px);
+      transform: translateY(-60px) scale(1.15);
+      opacity: 0.5;
+    }
+  
+    100% {
+      filter: blur(7px);
+      transform: translateY(-80px) scale(1.2);
+      opacity: 0;
+    }
+  }
